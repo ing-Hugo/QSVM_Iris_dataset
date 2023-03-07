@@ -33,4 +33,64 @@ Currently, there are several kernel functions. However, Sklearn, a famous data s
 Even with kernel mapping, however, we might find it computationally expensive and inefficient to find such map features to the point of being ineffective to use SVM. For such cases, we can apply what is known as Quantum Kernel.
 
 
+Quantum Kernel
+The idea behind quantum kernels is to take advantage of quantum mechanics to achieve better results while mapping the feature vector. The general guidelines for such mapping are encoding classical data into qubits, performing operations (such as superposition and rotations in the Bloch sphere), then computing the dot product of the resulting states.
+
+Some of the proposals for the kernel have been made. For instance, Aram Harrow et al. proposed the following kernel circuit:
+
+![image](https://user-images.githubusercontent.com/68777214/223540464-794a0554-f064-42ae-b564-f1026339fa9a.png)
+
+Here, U is a unitary gate that takes the feature vector as a parameter that represents the following, where S is the test dataset:
+
+![image](https://user-images.githubusercontent.com/68777214/223540600-23fade7f-0565-4a2c-b2d9-a6e9b4547247.png)
+
+Although it may be complex, quantum kernels have to perform operations that are not available to a classical machine to outperform them. In the case above, the circuit uses Hadamard gates and Z Pauli matrices to get some advantage over them.
+
+Currently, Qiskit has 2 types of kernels available and another one that allows the user to create circuits that will encode the classical data.
+
+ZFeatureMap
+The idea for ZFeatureMap is that, for each dimension in our feature set, there is going to be a qubit that will go through a Hadamard gate and a unitary gate Uϕ.
+
+
+![image](https://user-images.githubusercontent.com/68777214/223540790-80b7e132-50e1-4b37-a3a6-94c332304a19.png)
+
+As shown, the circuit is linear in the sense that does not ‘crossover’ (i.e. no CNOT gates) information through the qubits, which makes it absent of entanglement besides de H gates.
+
+ZZFeatureMap
+The ZZFeatureMap adds entanglement to the quantum system in the following way.
+
+![image](https://user-images.githubusercontent.com/68777214/223540865-60d7ce73-7a73-4c67-9b92-071c56e7a702.png)
+
+
+Applying Quantum Kernels in ML
+Now the next step is applying these ideas into datasets. Qiskit already provides datasets suitable to benchmark QSVM against regular SVM.
+
+First, we are going to import Qiskit and set up our data set:
+
+
+![image](https://user-images.githubusercontent.com/68777214/223541187-88b17425-d17a-44ec-bd1f-d6106ac08f6d.png)
+
+Then, we are going to get the backend running for our experiment in Qiskit and define our feature map to set up our kernel:
+
+![image](https://user-images.githubusercontent.com/68777214/223541885-429476aa-8516-48fd-a9c9-e6496f1b3fe5.png)
+
+![image](https://user-images.githubusercontent.com/68777214/223542067-affbdfcd-44e8-4808-aa87-d9b50c4e338a.png)
+
+Now we run the experiments:
+
+![image](https://user-images.githubusercontent.com/68777214/223542203-226022b1-9edc-4435-85b3-375627acfd15.png)
+
+Conclusion:
+
+Quantum Machine Learning will improve current predictions models. In particular, Support Vector Machine has been proved to be a very effective method in order to get better results than classical algorithms.
+
+
+
+
+
+
+
+
+
+
 
