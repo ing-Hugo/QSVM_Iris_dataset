@@ -1,6 +1,6 @@
 
-Quantum Support Vector Machine (QSVM)
-Classical Support Vector Machine
+#Quantum Support Vector Machine (QSVM)
+##Classical Support Vector Machine
 
 ![image](https://user-images.githubusercontent.com/68777214/223538076-eb33388f-5683-4587-9a7d-03084baded16.png)
 
