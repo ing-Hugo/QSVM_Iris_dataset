@@ -1,6 +1,7 @@
-# QSVM_Iris_dataset
+
 #Quantum Support Vector Machine (QSVM)
 Classical Support Vector Machine
+
 ![image](https://user-images.githubusercontent.com/68777214/223538076-eb33388f-5683-4587-9a7d-03084baded16.png)
 
 
@@ -25,9 +26,10 @@ Although it may be very computationally expensive to compute the mapping, SVM do
 
 Currently, there are several kernel functions. However, Sklearn, a famous data science library, has already implemented 3 useful ones:
 
-Polynomial → k(xᵢ, xⱼ) = (xᵢ ⋅ xⱼ)ᵈ , linear if d = 1
-Radial Basis Function (RBF) → k(xᵢ, xⱼ) = exp(-γ|xᵢ –xⱼ|²), for γ >0
-Sigmoid → k(xᵢ,xⱼ) = tanh(κ xᵢ ⋅ xⱼ + c), for κ > 0 and c < 0
+* Polynomial → k(xᵢ, xⱼ) = (xᵢ ⋅ xⱼ)ᵈ , linear if d = 1
+* Radial Basis Function (RBF) → k(xᵢ, xⱼ) = exp(-γ|xᵢ –xⱼ|²), for γ >0
+* Sigmoid → k(xᵢ,xⱼ) = tanh(κ xᵢ ⋅ xⱼ + c), for κ > 0 and c < 0
+
 Even with kernel mapping, however, we might find it computationally expensive and inefficient to find such map features to the point of being ineffective to use SVM. For such cases, we can apply what is known as Quantum Kernel.
 
 
