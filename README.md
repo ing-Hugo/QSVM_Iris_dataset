@@ -1,6 +1,6 @@
 
-#Quantum Support Vector Machine (QSVM)
-##Classical Support Vector Machine
+Quantum Support Vector Machine (QSVM)
+
 
 ![image](https://user-images.githubusercontent.com/68777214/223538076-eb33388f-5683-4587-9a7d-03084baded16.png)
 
@@ -83,6 +83,13 @@ Now we run the experiments:
 Conclusion:
 
 Quantum Machine Learning will improve current predictions models. In particular, Support Vector Machine has been proved to be a very effective method in order to get better results than classical algorithms.
+
+References:
+
+[https://arxiv.org/pdf/1804.11326.pdf]
+[https://qiskit.org/documentation/stable/0.32/aqua_tutorials/Qiskit%20Algorithms%20Migration%20Guide.html]
+[https://qiskit.org/documentation/machine-learning/tutorials/02a_training_a_quantum_model_on_a_real_dataset.html]
+[https://github.com/qiskit-community/qiskit-community-tutorials/blob/master/machine_learning/qsvm_multiclass.ipynb]
 
 
 
